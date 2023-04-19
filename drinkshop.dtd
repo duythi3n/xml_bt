@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT drink_shop (drinks, customers, orders)>
+<!ELEMENT drinks (drink+)>
+<!ELEMENT drink (id, name, price, description)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT customers (customer+)>
+<!ELEMENT customer (id, name, phone, email)>
+<!ELEMENT phone (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT orders (order+)>
+<!ELEMENT order (id, customer_id, product_id, quantity, date, status)>
+<!ELEMENT customer_id (#PCDATA)>
+<!ELEMENT product_id (#PCDATA)>
+<!ELEMENT quantity (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT status (#PCDATA)>

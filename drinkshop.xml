@@ -1,0 +1,59 @@
+<!DOCTYPE drink_shop SYSTEM "drinkshop.dtd">
+<drink_shop>
+  <drinks>
+    <drink>
+      <id>1</id>
+      <name>Cà phê đen</name>
+      <price>20000</price>
+      <description>Đồ uống ngon từ hạt cà phê Arabica thuần chất</description>
+    </drink>
+    <drink>
+      <id>2</id>
+      <name>Trà sữa trân châu đường đen</name>
+      <price>35000</price>
+      <description>Đồ uống trà sữa ngon với trân châu và đường đen thơm ngon</description>
+    </drink>
+    <drink>
+      <id>3</id>
+      <name>Sinh tố dâu</name>
+      <price>40000</price>
+      <description>Đồ uống sinh tố hoa quả ngon từ dâu tây</description>
+    </drink>
+  </drinks>
+
+  <customers>
+    <customer>
+      <id>1</id>
+      <name>Nguyễn Văn A</name>
+      <phone>0901234567</phone>
+      <email>nguyenvana@gmail.com</email>
+    </customer>
+    <customer>
+      <id>2</id>
+      <name>Trần Thị B</name>
+      <phone>0912345678</phone>
+      <email>tranthib@gmail.com</email>
+    </customer>
+  </customers>
+
+  <orders>
+    <order>
+      <id>1</id>
+      <customer_id>1</customer_id>
+      <product_id>1</product_id>
+      <quantity>2</quantity>
+      <date>2023-03-15</date>
+      <status>Đã thanh toán</status>
+    </order>
+    <order>
+      <id>2</id>
+      <customer_id>2</customer_id>
+      <product_id>2</product_id>
+      <quantity>1</quantity>
+      <date>2023-03-14</date>
+      <status>Đã giao hàng</status>
+    </order>
+  </orders>
+</drink_shop>
+
+

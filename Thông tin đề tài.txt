@@ -1,0 +1,36 @@
+Thông tin thành viên nhóm:
+	62132235 - Nguyễn Trọng Tín
+	62132003 - Đoàn Duy Thiện
+
+Đề tài: Quản lý bán đồ uống
+
+Mô tả cấu trúc tài liệu XML:
+
+Cấu trúc dữ liệu này bao gồm ba phần chính: drinks (sản phẩm), customers (khách hàng), và orders (đơn hàng).
+
+-	drinks: thẻ cha, chứa toàn bộ thông tin các loại đồ uống.
+	-	drink: đây là thẻ con chứa thông tin về một đồ uống cụ thể.
+		o	id: thẻ con của drink 				– mã đồ uống 				=> xs:id (là khóa).
+		o	name: thẻ con của drink 			– tên đồ uống 				=> xs:string.
+		o	price: thẻ con của drink 			– giá trị đồ uống			=> xs:double.
+		o	description: thẻ con của drink 		– miêu tả về loại đồ uống 	=> xs:string.
+
+
+-	Customers: Thẻ cha chứa toàn bộ thông tin các khách hàng.
+	-	Custimer: Thẻ con chứa thông tin của một khách hàng cụ thể.
+		o	id: thẻ con của customer 			– mã khách hàng 			=> xs:id (là khóa).
+		o	name: thẻ con của customer 			– tên khách hàng 			=> xs:string.
+		o	phone: thẻ con của customer 		– số điện thoại 			=> xs:string.
+		o	email: thẻ con của customer 		– email khách hàng 			=> xs:string.
+
+
+
+-	Orders: Thẻ cha chứa toàn bộ thông tin các hóa đơn.
+	-	Order: Thẻ con chứa thông tin của một hóa đơn.
+		o	id: thẻ con của order 				– mã hóa đơn 				=> xs:id (là khóa).
+		o	customer_id: thẻ con của order		– mã khách hàng 			=> xs:string.
+		o	profuct_id: thẻ con của order 		– mã sản phẩm 				=> xs:string.
+		o	quantity: thể con của order 		– số lượng 					=> xs:unsignedInt.
+		o	date: thẻ con của order 			– ngày mua hàng 			=> xs:string.
+		o	price: thẻ con của order 			– thành tiền 				=> xs:double.
+
