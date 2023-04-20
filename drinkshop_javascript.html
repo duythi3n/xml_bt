@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drink Shop</title>
+  </head>
+  <body>
+    <h1>Drink Shop</h1>
+    
+    <h2>Drinks</h2>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+      </tr>
+    </table>
+    <script>
+        const xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 &amp;&amp; this.status == 200) {
+            const xmlDoc = this.responseXML;
+            const drinks = xmlDoc.getElementsByTagName("drink");
+            for (let i = 0; i &lt; drinks.length; i++) {
+              const id = drinks[i].getElementsByTagName("id")[0].childNodes[0].nodeValue;
+              const name = drinks[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+              const price = drinks[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;
+              const description = drinks[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
+              const row = document.createElement("tr");
+              const idCell = document.createElement("td");
+              const nameCell = document.createElement("td");
+              const priceCell = document.createElement("td");
+              const descriptionCell = document.createElement("td");
+              idCell.innerHTML = id;
+              nameCell.innerHTML = name;
+              priceCell.innerHTML = price;
+              descriptionCell.innerHTML = description;
+              row.appendChild(idCell);
+              row.appendChild(nameCell);
+              row.appendChild(priceCell);
+              row.appendChild(descriptionCell);
+              document.getElementsByTagName("table")[0].appendChild(row);
+            }
+          }
+        };
+        xhttp.open("GET", "drinkshop.xml", true);
+        xhttp.send();
+      </script>
+  </body>
+</html>
