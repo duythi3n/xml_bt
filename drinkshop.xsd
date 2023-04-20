@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="drink_shop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="drinks" type="drinksType"/>
+        <xs:element name="customers" type="customersType"/>
+        <xs:element name="orders" type="ordersType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="drinksType">
+    <xs:sequence>
+      <xs:element name="drink" type="drinkType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="drinkType">
+    <xs:sequence>
+      <xs:element name="id" type="xs:integer"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="price" type="xs:integer"/>
+      <xs:element name="description" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="customersType">
+    <xs:sequence>
+      <xs:element name="customer" type="customerType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="customerType">
+    <xs:sequence>
+      <xs:element name="id" type="xs:integer"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="phone" type="xs:string"/>
+      <xs:element name="email" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ordersType">
+    <xs:sequence>
+      <xs:element name="order" type="orderType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="orderType">
+    <xs:sequence>
+      <xs:element name="id" type="xs:integer"/>
+      <xs:element name="customer_id" type="xs:integer"/>
+      <xs:element name="product_id" type="xs:integer"/>
+      <xs:element name="quantity" type="xs:integer"/>
+      <xs:element name="date" type="xs:date"/>
+      <xs:element name="status" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
