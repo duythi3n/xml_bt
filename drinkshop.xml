@@ -1,8 +1,15 @@
 <!DOCTYPE drink_shop SYSTEM "drinkshop.dtd">
+<?xml-stylesheet type="text/css" href="drinkshop.css"?>
 <drink_shop>
   <drinks>
     <drink>
-      <id>1</id>
+      <id >ID</id>
+      <name>Name</name>
+      <price>Giá</price>
+      <description>Mô Tả</description>
+    </drink>
+    <drink>
+      <id >1</id>
       <name>Cà phê đen</name>
       <price>20000</price>
       <description>Đồ uống ngon từ hạt cà phê Arabica thuần chất</description>
@@ -23,6 +30,12 @@
 
   <customers>
     <customer>
+      <id>ID</id>
+      <name>Name</name>
+      <phone>Phone</phone>
+      <email>Email</email>
+    </customer>
+    <customer>
       <id>1</id>
       <name>Nguyễn Văn A</name>
       <phone>0901234567</phone>
@@ -37,6 +50,14 @@
   </customers>
 
   <orders>
+    <order>
+      <id>ID</id>
+      <customer_id>Customer ID</customer_id>
+      <product_id>Product ID</product_id>
+      <quantity>Quantity</quantity>
+      <date>Date</date>
+      <status>Status</status>
+    </order>
     <order>
       <id>1</id>
       <customer_id>1</customer_id>

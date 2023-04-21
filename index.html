@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Drink Shop</title>
+    </head>
+    <body>
+        <h1>Drink Shop</h1>
+        <h2>Drinks</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Cà phê đen</td>
+                <td>20000</td>
+                <td>Đồ uống ngon từ hạt cà phê Arabica thuần chất</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Trà sữa trân châu đường đen</td>
+                <td>35000</td>
+                <td>Đồ uống trà sữa ngon với trân châu và đường đen thơm ngon</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Sinh tố dâu</td>
+                <td>40000</td>
+                <td>Đồ uống sinh tố hoa quả ngon từ dâu tây</td>
+            </tr>
+        </table>
+        <h2>Customers</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Nguyễn Văn A</td>
+                <td>0901234567</td>
+                <td>nguyenvana@gmail.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Trần Thị B</td>
+                <td>0912345678</td>
+                <td>tranthib@gmail.com</td>
+            </tr>
+        </table>
+        <h2>Orders</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Customer ID</th>
+                <th>Product ID</th>
+                <th>Quantity</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>2</td>
+                <td>2023-03-15</td>
+                <td>Đã thanh toán</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2023-03-14</td>
+                <td>Đã giao hàng</td>
+            </tr>
+        </table>
+        <script>
+            # Parse tài liệu XML
+            xml_doc = xml.dom.minidom.parse("drinkshop.xml")
+            
+            # Lấy các thẻ drinks, customers và orders
+            drinks = xml_doc.getElementsByTagName("drink")
+            customers = xml_doc.getElementsByTagName("customer")
+            orders = xml_doc.getElementsByTagName("order")
+            
+            # Hiển thị thông tin các đồ uống trong tài liệu
+            for drink in drinks:
+                print("Tên đồ uống:", drink.getElementsByTagName("name")[0].childNodes[0].nodeValue)
+                print("Giá:", drink.getElementsByTagName("price")[0].childNodes[0].nodeValue)
+                print("Mô tả:", drink.getElementsByTagName("description")[0].childNodes[0].nodeValue)
+                print()
+            
+            # Hiển thị thông tin các khách hàng trong tài liệu
+            for customer in customers:
+                print("Tên khách hàng:", customer.getElementsByTagName("name")[0].childNodes[0].nodeValue)
+                print("Số điện thoại:", customer.getElementsByTagName("phone")[0].childNodes[0].nodeValue)
+                print("Email:", customer.getElementsByTagName("email")[0].childNodes[0].nodeValue)
+                print()
+            
+            # Hiển thị thông tin các đơn hàng trong tài liệu
+            for order in orders:
+                print("ID đơn hàng:", order.getElementsByTagName("id")[0].childNodes[0].nodeValue)
+                print("ID khách hàng:", order.getElementsByTagName("customer_id")[0].childNodes[0].nodeValue)
+                print("ID sản phẩm:", order.getElementsByTagName("product_id")[0].childNodes[0].nodeValue)
+                print("Số lượng:", order.getElementsByTagName("quantity")[0].childNodes[0].nodeValue)
+                print("Ngày đặt hàng:", order.getElementsByTagName("date")[0].childNodes[0].nodeValue)
+                print("Trạng thái:", order.getElementsByTagName("status")[0].childNodes[0].nodeValue)
+                print()
+        </script>
+    </body>
+</html>
