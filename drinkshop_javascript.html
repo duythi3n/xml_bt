@@ -18,10 +18,10 @@
     <script>
         const xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 &amp;&amp; this.status == 200) {
+          if (this.readyState == 4 && this.status == 200) {
             const xmlDoc = this.responseXML;
             const drinks = xmlDoc.getElementsByTagName("drink");
-            for (let i = 0; i &lt; drinks.length; i++) {
+            for (let i = 0; drinks.length; i++) {
               const id = drinks[i].getElementsByTagName("id")[0].childNodes[0].nodeValue;
               const name = drinks[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
               const price = drinks[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;

@@ -1,4 +1,4 @@
-<!DOCTYPE drink_shop SYSTEM "drinkshop.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
 <drink_shop>
   <drinks>
     <drink>
