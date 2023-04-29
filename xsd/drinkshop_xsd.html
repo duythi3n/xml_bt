@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8" />
+      <title>Display DTD File</title>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   </head>
+   <body>
+      <div id="xsdModal" style="display: none">
+         <pre id="xsdContent"></pre>
+      </div>
+
+      <script>
+         $(document).ready(function () {
+            $.ajax({
+               url: "drinkshop.xsd",
+               type: "GET",
+               dataType: "text",
+               success: function (response) {
+                  $("#xsdContent").text(response);
+                  $("#xsdModal").show();
+               },
+            });
+         });
+      </script>
+   </body>
+</html>

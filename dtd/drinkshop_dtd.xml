@@ -1,67 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<drink_shop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="drinkshop.xsd">
+<!DOCTYPE drink_shop SYSTEM "drinkshop.dtd">
+<drink_shop>
   <drinks>
+    <!-- <drink>
+      <id >ID</id>
+      <name>Name</name>
+      <price>Giá</price>
+      <description>Mô Tả</description>
+    </drink> -->
     <drink>
-      <id>D001</id>
+      <id >1</id>
       <name>Cà phê đen</name>
       <price>20000</price>
       <description>Đồ uống ngon từ hạt cà phê Arabica thuần chất</description>
     </drink>
     <drink>
-      <id>D002</id>
+      <id>2</id>
       <name>Trà sữa trân châu đường đen</name>
       <price>35000</price>
       <description>Đồ uống trà sữa ngon với trân châu và đường đen thơm ngon</description>
     </drink>
     <drink>
-      <id>D003</id>
+      <id>3</id>
       <name>Sinh tố dâu</name>
       <price>40000</price>
       <description>Đồ uống sinh tố hoa quả ngon từ dâu tây</description>
     </drink>
   </drinks>
-  
+
   <customers>
+    <!-- <customer>
+      <id>ID</id>
+      <name>Name</name>
+      <phone>Phone</phone>
+      <email>Email</email>
+    </customer> -->
     <customer>
-      <id>C001</id>
+      <id>1</id>
       <name>Nguyễn Văn A</name>
       <phone>0901234567</phone>
       <email>nguyenvana@gmail.com</email>
     </customer>
     <customer>
-      <id>C002</id>
+      <id>2</id>
       <name>Trần Thị B</name>
       <phone>0912345678</phone>
       <email>tranthib@gmail.com</email>
     </customer>
   </customers>
-  
+
   <orders>
+    <!-- <order>
+      <id>ID</id>
+      <customer_id>Customer ID</customer_id>
+      <product_id>Product ID</product_id>
+      <quantity>Quantity</quantity>
+      <date>Date</date>
+      <status>Status</status>
+    </order> -->
     <order>
-      <id>O001</id>
-      <customer_id>C001</customer_id>
-      <drink_id>D001</drink_id>
+      <id>1</id>
+      <customer_id>1</customer_id>
+      <product_id>1</product_id>
       <quantity>2</quantity>
-      <date>31-03-2023</date>
+      <date>2023-03-15</date>
       <status>Đã thanh toán</status>
     </order>
     <order>
-      <id>O002</id>
-      <customer_id>C002</customer_id>
-      <drink_id>D002</drink_id>
+      <id>2</id>
+      <customer_id>2</customer_id>
+      <product_id>2</product_id>
       <quantity>1</quantity>
-      <date>14-01-2023</date>
-      <status>Chưa thanh toán</status>
-    </order>
-    <order>
-      <id>O003</id>
-      <customer_id>C003</customer_id>
-      <drink_id>D001</drink_id>
-      <quantity>1</quantity>
-      <date>15-01-2023</date>
-      <status>Đã thanh toán</status>
+      <date>2023-03-14</date>
+      <status>Đã giao hàng</status>
     </order>
   </orders>
 </drink_shop>

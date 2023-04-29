@@ -4,8 +4,7 @@
     exclude-result-prefixes="xs"
     version="1.0">
         <xsl:output method="html" indent="yes"/>
-        
-        <!-- XSLT template for displaying the list of drinks -->
+        <!-- Hiển thị bảng đồ uống -->
         <xsl:template match="/drink_shop/drinks">
             <h2>Đồ uống</h2>
             <table border="1">
@@ -27,7 +26,7 @@
             <br/>
         </xsl:template>
         
-        <!-- XSLT template for displaying the list of customers -->
+        <!-- Hiển thị bảng khách hàng -->
         <xsl:template match="/drink_shop/customers">
             <h2>Khách hàng</h2>
             <table border="1">
@@ -49,7 +48,7 @@
             <br/>
         </xsl:template>
         
-        <!-- XSLT template for displaying the list of orders -->
+        <!-- Hiển thị bảng hóa đơn  -->
         <xsl:template match="/drink_shop/orders">
             <h2>Đơn hàng</h2>
             <table border="1">
@@ -74,6 +73,5 @@
             </table>
             <br/>
         </xsl:template>
-        
         <!-- XSLT template to match the root node and apply templates to child nodes -->                    
 </xsl:stylesheet>

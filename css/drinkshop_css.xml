@@ -61,7 +61,7 @@
     <order>
       <id>1</id>
       <customer_id>1</customer_id>
-      <product_id>1</product_id>
+      <drink_id>1</drink_id>
       <quantity>2</quantity>
       <date>2023-03-15</date>
       <status>Đã thanh toán</status>
@@ -69,7 +69,7 @@
     <order>
       <id>2</id>
       <customer_id>2</customer_id>
-      <product_id>2</product_id>
+      <drink_id>2</drink_id>
       <quantity>1</quantity>
       <date>2023-03-14</date>
       <status>Đã giao hàng</status>

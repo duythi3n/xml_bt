@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <drink_shop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="drinkshop.xsd">
+ xsi:noNamespaceSchemaLocation="drinkshop.xsd">
   <drinks>
     <drink>
       <id>D001</id>
@@ -22,7 +22,7 @@
       <description>Đồ uống sinh tố hoa quả ngon từ dâu tây</description>
     </drink>
   </drinks>
-  
+
   <customers>
     <customer>
       <id>C001</id>
@@ -37,7 +37,7 @@
       <email>tranthib@gmail.com</email>
     </customer>
   </customers>
-  
+
   <orders>
     <order>
       <id>O001</id>
@@ -54,14 +54,6 @@
       <quantity>1</quantity>
       <date>14-01-2023</date>
       <status>Chưa thanh toán</status>
-    </order>
-    <order>
-      <id>O003</id>
-      <customer_id>C003</customer_id>
-      <drink_id>D001</drink_id>
-      <quantity>1</quantity>
-      <date>15-01-2023</date>
-      <status>Đã thanh toán</status>
     </order>
   </orders>
 </drink_shop>
