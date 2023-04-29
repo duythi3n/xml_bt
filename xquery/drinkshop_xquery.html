@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8" />
+      <title>Display DTD File</title>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   </head>
+   <body>
+      <div id="xqueryModal" style="display: none">
+         <pre id="xqueryContent"></pre>
+      </div>
+
+      <script>
+         $(document).ready(function () {
+            $.ajax({
+               url: "drinkshop.xquery",
+               type: "GET",
+               dataType: "text",
+               success: function (response) {
+                  $("#xqueryContent").text(response);
+                  $("#xqueryModal").show();
+               },
+            });
+         });
+      </script>
+   </body>
+</html>

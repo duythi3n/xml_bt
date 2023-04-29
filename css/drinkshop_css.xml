@@ -53,7 +53,7 @@
     <order>
       <id>ID</id>
       <customer_id>Customer ID</customer_id>
-      <product_id>Product ID</product_id>
+      <drink_id>Drink ID</drink_id>
       <quantity>Quantity</quantity>
       <date>Date</date>
       <status>Status</status>

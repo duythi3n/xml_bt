@@ -113,44 +113,14 @@ order {
    padding: 10px 0;
 }
 
-/* drink:nth-child(1)::before {
-   color: #000;
-   content: "ID";
-}
-
-drink:nth-child(2)::before {
-   color: #000;
-   content: "Name";
-}
-
-drink:nth-child(3)::before {
-   color: #000;
-   content: "Giá";
-}
-
-drink:nth-child(4)::before {
-   color: #000;
-   content: "Mô Tả";
-} */
-
-drink:nth-child(1)::before,
-drink:nth-child(2)::before,
-drink:nth-child(3)::before,
-drink:nth-child(4)::before {
-   background-color: #b8b8b8;
-   color: #000;
-   font-weight: bold;
-   font-size: large;
-}
-
-/* drink:nth-child(1),
+ drink:nth-child(1),
 customer:nth-child(1),
 order:nth-child(1) {
    background-color: #b8b8b8;
    color: #000;
    font-weight: bold;
    font-size: large;
-} */
+} 
 
 drink:nth-child(2),
 drink:nth-child(3),

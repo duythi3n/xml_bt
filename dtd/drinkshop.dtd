@@ -11,9 +11,9 @@
 <!ELEMENT phone (#PCDATA)>
 <!ELEMENT email (#PCDATA)>
 <!ELEMENT orders (order+)>
-<!ELEMENT order (id, customer_id, product_id, quantity, date, status)>
+<!ELEMENT order (id, customer_id, drink_id, quantity, date, status)>
 <!ELEMENT customer_id (#PCDATA)>
-<!ELEMENT product_id (#PCDATA)>
+<!ELEMENT drink_id (#PCDATA)>
 <!ELEMENT quantity (#PCDATA)>
 <!ELEMENT date (#PCDATA)>
 <!ELEMENT status (#PCDATA)>
