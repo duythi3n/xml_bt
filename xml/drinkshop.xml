@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="drinkshop.css"?>
-<!DOCTYPE drink_shop SYSTEM "drinkshop.dtd">
+<!-- <!DOCTYPE drink_shop SYSTEM "drinkshop.dtd"> -->
 <drink_shop>
   <drinks>
-    <drink>
+    <!-- <drink>
       <id >ID</id>
       <name>Name</name>
       <price>Giá</price>
       <description>Mô Tả</description>
-    </drink>
+    </drink> -->
     <drink>
       <id >1</id>
       <name>Cà phê đen</name>

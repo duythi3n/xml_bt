@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8" />
+      <title>Drink Shop</title>
+      <!-- <link rel="stylesheet" type="text/css" href="drinkshop.css" /> -->
+      <script src="./drinkshop.js"></script>
+      <link
+         href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+         rel="stylesheet"
+         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+         crossorigin="anonymous"
+      />
+      <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+         crossorigin="anonymous"
+      ></script>
+   </head>
+   <body onload="loadXMLDoc()">
+      <h1 class="text-center text-primary">Drink Shop</h1>
+
+      <div class="row">
+         <div class="col p-4">
+            <table class="table table-striped p-3" id="drinkTable">
+               <thead>
+                  <tr class="table-success">
+                     <th>ID</th>
+                     <th>Name</th>
+                     <th>Price</th>
+                     <th>Description</th>
+                     <th></th>
+                     <th></th>
+                  </tr>
+               </thead>
+               <tbody></tbody>
+            </table>
+         </div>
+      </div>
+
+      <div class="row">
+         <div class="col-6 p-4">
+            <form class="row g-3">
+               <div class="col-md-12">
+                  <label for="idInput" class="form-label">ID:</label>
+                  <input
+                     type="text"
+                     class="form-control"
+                     id="idInput"
+                     name="idInput"
+                  />
+               </div>
+
+               <div class="col-md-12">
+                  <label for="nameInput" class="form-label">Name:</label>
+                  <input
+                     type="text"
+                     class="form-control"
+                     id="nameInput"
+                     name="nameInput"
+                  />
+               </div>
+
+               <div class="col-md-12">
+                  <label for="priceInput" class="form-label">Price:</label>
+                  <input
+                     type="text"
+                     class="form-control"
+                     id="priceInput"
+                     name="priceInput"
+                  />
+               </div>
+
+               <div class="col-md-12">
+                  <label for="descriptionInput" class="form-label"
+                     >Description:</label
+                  >
+                  <input
+                     type="text"
+                     class="form-control"
+                     id="descriptionInput"
+                     name="descriptionInput"
+                  />
+               </div>
+
+               <div class="col-md-12">
+                  <button
+                     type="button"
+                     class="btn btn-primary"
+                     onclick="addDrink()"
+                  >
+                     Add
+                  </button>
+                  <button
+                     type="button"
+                     class="btn btn-primary"
+                     onclick="editDrink()"
+                  >
+                     Edit
+                  </button>
+                  <button
+                     type="button"
+                     class="btn btn-primary"
+                     onclick="deleteDrink()"
+                  >
+                     Delete
+                  </button>
+               </div>
+            </form>
+         </div>
+         <div class="col-6 p-4">
+            <div class="row">Add: Điền vào các ô Form để thêm dữ liệu</div>
+            <div class="row">Edit: Sửa dữ liệu theo ô ID</div>
+            <div class="row">Delete: Xóa dữ liệu theo ô ID</div>
+         </div>
+      </div>
+   </body>
+</html>
