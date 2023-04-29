@@ -55,6 +55,14 @@
       <date>14-01-2023</date>
       <status>Chưa thanh toán</status>
     </order>
+    <order>
+      <id>O003</id>
+      <customer_id>C002</customer_id>
+      <drink_id>D001</drink_id>
+      <quantity>1</quantity>
+      <date>15-01-2023</date>
+      <status>Đã thanh toán</status>
+    </order>
   </orders>
 </drink_shop>
 

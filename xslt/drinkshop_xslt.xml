@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <drink_shop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:noNamespaceSchemaLocation="drinkshop.xsd">
+  xsi:noNamespaceSchemaLocation="../xsd/drinkshop.xsd">
   <drinks>
     <drink>
       <id>D001</id>

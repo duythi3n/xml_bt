@@ -107,43 +107,43 @@
                   <tr>
                      <td>Drinks</td>
                      <td>Thẻ cha, chứa toàn bộ thông tin các loại đồ uống</td>
-                     <td>xs:element</td>
+                     <td></td>
                      <td></td>
                   </tr>
                   <tr>
                      <td>Drink</td>
                      <td>Thẻ con chứa thông tin về một đồ uống cụ thể</td>
-                     <td>xs:complexType</td>
+                     <td></td>
                      <td></td>
                   </tr>
                   <tr>
                      <td>id</td>
-                     <td>Thẻ con của drink, mã đồ uống</td>
-                     <td>xs:id (là khóa)</td>
-                     <td></td>
+                     <td>Thẻ con của drink, mã đồ uống, là khóa</td>
+                     <td>xs:ID</td>
+                     <td>Tối đa 4 ký tự, bắt đầu bằng chữ D</td>
                   </tr>
                   <tr>
                      <td>name</td>
                      <td>Thẻ con của drink, tên đồ uống</td>
                      <td>xs:string</td>
-                     <td></td>
+                     <td>Tối đa 30 ký tự</td>
                   </tr>
                   <tr>
                      <td>price</td>
                      <td>Thẻ con của drink, giá trị đồ uống</td>
                      <td>xs:double</td>
-                     <td></td>
+                     <td>Tối đa 500000</td>
                   </tr>
                   <tr>
                      <td>description</td>
                      <td>Thẻ con của drink, miêu tả về loại đồ uống</td>
                      <td>xs:string</td>
-                     <td></td>
+                     <td>Tối đa 50 ký tự</td>
                   </tr>
                   <tr>
                      <td>Customers</td>
                      <td>Thẻ cha chứa toàn bộ thông tin các khách hàng</td>
-                     <td>xs:element</td>
+                     <td></td>
                      <td></td>
                   </tr>
                   <tr>
@@ -154,32 +154,32 @@
                   </tr>
                   <tr>
                      <td>id</td>
-                     <td>Thẻ con của customer, mã khách hàng</td>
-                     <td>xs:id (là khóa)</td>
-                     <td></td>
+                     <td>Thẻ con của customer, mã khách hàng, là khóa</td>
+                     <td>xs:ID</td>
+                     <td>Tối đa 4 ký tự, bắt đầu bằng chữ C</td>
                   </tr>
                   <tr>
                      <td>name</td>
                      <td>Thẻ con của customer, tên khách hàng</td>
                      <td>xs:string</td>
-                     <td></td>
+                     <td>Tối đa 50 ký tự</td>
                   </tr>
                   <tr>
                      <td>phone</td>
                      <td>Thẻ con của customer, số điện thoại</td>
                      <td>xs:string</td>
-                     <td></td>
+                     <td>Tối đa 10 ký tự, ràng buộc pattern</td>
                   </tr>
                   <tr>
                      <td>email</td>
                      <td>Thẻ con của customer, email khách hàng</td>
                      <td>xs:string</td>
-                     <td></td>
+                     <td>Ràng buộc pattern</td>
                   </tr>
                   <tr>
                      <td>Orders</td>
                      <td>Thẻ cha chứa toàn bộ thông tin các hóa đơn</td>
-                     <td>xs:element</td>
+                     <td></td>
                      <td></td>
                   </tr>
                   <tr>
@@ -191,19 +191,19 @@
                   <tr>
                      <td>id</td>
                      <td>Thẻ con chứa thông tin của một hóa đơn</td>
-                     <td></td>
-                     <td></td>
+                     <td>xs:ID</td>
+                     <td>Tối đa 4 ký tự, bắt đầu bằng chữ O</td>
                   </tr>
                   <tr>
                      <td>customer_id</td>
-                     <td>thẻ con của order, chứa mã khách hàng</td>
+                     <td>thẻ con của order, chứa mã khách hàng, khóa ngoại</td>
                      <td>xs:IDREF</td>
                      <td></td>
                   </tr>
 
                   <tr>
-                     <td>profuct_id</td>
-                     <td>thẻ con của order, chứa mã sản phẩm</td>
+                     <td>drink_id</td>
+                     <td>thẻ con của order, chứa mã sản phẩm, khóa ngoại</td>
                      <td>xs:IDREF</td>
                      <td></td>
                   </tr>
@@ -219,14 +219,14 @@
                      <td>date</td>
                      <td>thẻ con của order, chứa ngày mua hàng</td>
                      <td>xs:string.</td>
-                     <td></td>
+                     <td>Ràng buộc pattern</td>
                   </tr>
 
                   <tr>
-                     <td>price</td>
-                     <td>thẻ con của order, chứa thành tiền</td>
+                     <td>status</td>
+                     <td>thẻ con của order, chứa trạng thái</td>
                      <td>xs:double.</td>
-                     <td></td>
+                     <td>Ràng buộc Enum: Chưa thanh toán | Đã thanh toán</td>
                   </tr>
                </tbody>
             </table>

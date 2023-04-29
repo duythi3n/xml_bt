@@ -5,7 +5,7 @@
     version="1.0">
         <xsl:output method="html" indent="yes"/>
         <!-- Hiển thị bảng đồ uống -->
-        <xsl:template match="/drink_shop/drinks">
+        <xsl:template match="/">
             <h2>Đồ uống</h2>
             <table border="1">
                 <tr>
@@ -14,7 +14,7 @@
                     <th>Giá</th>
                     <th>Mô tả</th>
                 </tr>
-                <xsl:for-each select="drink">
+                <xsl:for-each select="/drink_shop/drinks/drink">
                     <tr>
                         <td><xsl:value-of select="id"/></td>
                         <td><xsl:value-of select="name"/></td>
@@ -24,10 +24,9 @@
                 </xsl:for-each>
             </table>
             <br/>
-        </xsl:template>
+
         
         <!-- Hiển thị bảng khách hàng -->
-        <xsl:template match="/drink_shop/customers">
             <h2>Khách hàng</h2>
             <table border="1">
                 <tr>
@@ -36,7 +35,7 @@
                     <th>Điện thoại</th>
                     <th>Email</th>
                 </tr>
-                <xsl:for-each select="customer">
+                <xsl:for-each select="/drink_shop/customers/customer">
                     <tr>
                         <td><xsl:value-of select="id"/></td>
                         <td><xsl:value-of select="name"/></td>
@@ -46,10 +45,8 @@
                 </xsl:for-each>
             </table>
             <br/>
-        </xsl:template>
         
         <!-- Hiển thị bảng hóa đơn  -->
-        <xsl:template match="/drink_shop/orders">
             <h2>Đơn hàng</h2>
             <table border="1">
                 <tr>
@@ -60,7 +57,7 @@
                     <th>Ngày đặt hàng</th>
                     <th>Trạng thái</th>
                 </tr>
-                <xsl:for-each select="order">
+                <xsl:for-each select="/drink_shop/orders/order">
                     <tr>
                         <td><xsl:value-of select="id"/></td>
                         <td><xsl:value-of select="customer_id"/></td>
@@ -72,6 +69,5 @@
                 </xsl:for-each>
             </table>
             <br/>
-        </xsl:template>
-        <!-- XSLT template to match the root node and apply templates to child nodes -->                    
+        </xsl:template>               
 </xsl:stylesheet>

@@ -9,10 +9,37 @@
               <xs:element maxOccurs="unbounded" name="drink">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="id" type="xs:ID"/>
-                    <xs:element name="name" type="xs:string"/>
-                    <xs:element name="price" type="xs:double"/>
-                    <xs:element name="description" type="xs:string"/>
+                    <xs:element name="id">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:ID">
+                          <xs:pattern value="D[0-9]{3}"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="name">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="0"/>
+                          <xs:maxLength value="30"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="price">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:double">
+                          <xs:minInclusive value="0"/>
+                          <xs:maxInclusive value="500000"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="description">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="100"/>
+                          <xs:minLength value="0"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
@@ -29,10 +56,41 @@
               <xs:element maxOccurs="unbounded" name="customer">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="id" type="xs:ID"/>
-                    <xs:element name="name" type="xs:string"/>
-                    <xs:element name="phone" type="xs:string"/>
-                    <xs:element name="email" type="xs:string"/>
+                    <xs:element name="id">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:ID">
+                          <xs:minLength value="0"/>
+                          <xs:maxLength value="4"/>
+                          <xs:pattern value="C[0-9]{3}"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="name">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="0"/>
+                          <xs:maxLength value="50"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="phone">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:pattern value="0[0-9]{9}"/>
+                          <xs:maxLength value="10"/>
+                          <xs:minLength value="0"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="email">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:minLength value="0"/>
+                          <xs:maxLength value="50"/>
+                          <xs:pattern value="[A-Za-z0-9]+@[A-Za-z0-9]+\.[A-Za-z0-9]+"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
@@ -49,10 +107,23 @@
               <xs:element maxOccurs="unbounded" name="order">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="id" type="xs:ID"/>
+                    <xs:element name="id">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:ID">
+                          <xs:pattern value="O[0-9]{3}"/>
+                          <xs:maxLength value="4"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
                     <xs:element name="customer_id" type="xs:IDREF"/>
                     <xs:element name="drink_id" type="xs:IDREF"/>
-                    <xs:element name="quantity" type="xs:unsignedByte"/>
+                    <xs:element name="quantity">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:unsignedByte">
+                          <xs:minInclusive value="1"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
                     <xs:element name="date">
                       <xs:simpleType>
                         <xs:restriction base="xs:string">
@@ -62,7 +133,7 @@
                         </xs:restriction>
                       </xs:simpleType>
                     </xs:element>
-                    <xs:element name="status">
+                    <xs:element name="status" default="Chưa thanh toán">
                       <xs:simpleType>
                         <xs:restriction base="xs:string">
                           <xs:enumeration value="Chưa thanh toán"/>
