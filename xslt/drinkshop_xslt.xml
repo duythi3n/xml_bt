@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?xml-stylesheet type="text/xsl" href="drinkshop.xsl"?>
 <drink_shop xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="../xsd/drinkshop.xsd">
   <drinks>
@@ -33,6 +34,12 @@
     <customer>
       <id>C002</id>
       <name>Trần Thị B</name>
+      <phone>0912345678</phone>
+      <email>tranthib@gmail.com</email>
+    </customer>
+    <customer>
+      <id>C003</id>
+      <name>Trần Thị C</name>
       <phone>0912345678</phone>
       <email>tranthib@gmail.com</email>
     </customer>

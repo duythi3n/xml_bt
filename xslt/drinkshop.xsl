@@ -61,7 +61,7 @@
                     <tr>
                         <td><xsl:value-of select="id"/></td>
                         <td><xsl:value-of select="customer_id"/></td>
-                        <td><xsl:value-of select="product_id"/></td>
+                        <td><xsl:value-of select="drink_id"/></td>
                         <td><xsl:value-of select="quantity"/></td>
                         <td><xsl:value-of select="date"/></td>
                         <td><xsl:value-of select="status"/></td>

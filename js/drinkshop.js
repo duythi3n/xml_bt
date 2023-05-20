@@ -98,12 +98,16 @@ function editDrink() {
 function deleteDrink() {
    var id = document.getElementById("idInput").value;
    var drinks = xmlDoc.getElementsByTagName("drink");
+   var message = document.getElementById('alert-message');
    for (var i = 0; i < drinks.length; i++) {
       if (
          drinks[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == id
       ) {
          drinks[i].parentNode.removeChild(drinks[i]);
+         message.innerHTML = "Đã xóa phần tử có id là " + id;
          break;
+      } else {
+          message.innerHTML = "Không có phần tử có id là " + id;
       }
    }
    displayDrinks();

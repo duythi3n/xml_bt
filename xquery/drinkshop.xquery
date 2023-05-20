@@ -6,6 +6,7 @@ let $drink_shop := doc("../xml/drinkshop.xml")
 for $drink in $drink_shop/drink_shop/drinks/drink[price >= 35000]
 return $drink
 :)
+
 (: Câu 2: Lấy ra tên của khách hàng có id là "C001" :)
 
 (:for $customer in $drink_shop/drink_shop/customers/customer[id = "C001"]
